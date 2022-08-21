@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main style="text-align: center">
+      <div>
+        <img src="https://raw.githubusercontent.com/Techpro709/MIT-Coding-Assignments/main/Assignment-1-WebDesign/SnowBlob.png" alt="Snowboarder" width="750"/>
+        <div>
+          <p>
+            This guy is snowboarding really well, <br />
+            watch him take that turn!
+          </p>
+          
+        </div>
+      </div>
+      <div id="commentSection">
+        <div id="comments">
+        </div>
+        <br>
+        <input type="text" id="comment" placeholder="Comments" />
+        <br/> <br>
+        <button onclick="comment()">Post Comment</button>
+      </div>
+    </main>
+    <script>
+      var commentText;
+      function comment(commentText){
+        commentText = document.getElementById('comment').value;
+        if(commentText != ""){
+          document.getElementById('comments').innerHTML += "<div class=\"cm-msg-text\">" + commentText +"</div><br><br><br>";
+          alert("You just posted: \"" + commentText + "\", Nice job!")
+        }
+      }
+    </script>
+  </body>
+</html>
